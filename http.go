@@ -7,4 +7,6 @@ type GqlConfig struct {
 	PlaygroundEnabled bool
 	Port              string
 	ComplexityLimit   int
+	Environment       string
+	Redis             RedisConfig
 }
