@@ -11,6 +11,12 @@ func Int(i int) *int { return &i }
 // Int64 returns a pointer to the passed integer i.
 func Int64(i int64) *int64 { return &i }
 
+// Float32 returns a pointer to the passed float32 f.
+func Float32(f float32) *float32 { return &f }
+
+// Float64 returns a pointer to the passed float64 f.
+func Float64(f float64) *float64 { return &f }
+
 // Bool returns a pointer to the passed bool b.
 func Bool(b bool) *bool { return &b }
 
