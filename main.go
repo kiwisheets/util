@@ -1,5 +1,7 @@
 package util
 
+import "crypto/ecdsa"
+
 type ServerConfig struct {
 	Version     string
 	Environment string
@@ -11,7 +13,8 @@ type ServerConfig struct {
 }
 
 type JWTConfig struct {
-	Secret string
+	PublicKey  *ecdsa.PublicKey
+	PrivateKey *ecdsa.PrivateKey
 }
 
 type HashConfig struct {
