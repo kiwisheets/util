@@ -34,10 +34,3 @@ type DatabaseConfig struct {
 type RedisConfig struct {
 	Address string
 }
-
-type RabbitConfig struct {
-	Dsn     string
-	Timeout int
-	Retry   int
-	Durable bool
-}
