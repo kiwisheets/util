@@ -5,6 +5,7 @@ github.com/cheshir/go-mq v1.0.2/go.mod h1:lAwW/xhfO27t6WSVHFtLdgYioymwJvQxMSH19z
 github.com/google/uuid v1.0.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/joho/godotenv v1.3.0 h1:Zjp+RcGpHhGlrMbJzXTrZZPrWj+1vfm90La1wgB6Bhc=
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
 github.com/maxtroughear/goenv v0.0.3 h1:F9sQ2rh5bImnNQTe+ExzGaqyiq43RPKyZLm8R99n5bI=
 github.com/maxtroughear/goenv v0.0.3/go.mod h1:pPFjhNfYw2QUK7k42vH6ISCo2I3qtUso/uu3oyfWEMQ=

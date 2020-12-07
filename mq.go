@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 
 	"github.com/cheshir/go-mq"
+	"github.com/joho/godotenv"
 	"github.com/maxtroughear/goenv"
 	"gopkg.in/yaml.v2"
 )
@@ -22,6 +23,7 @@ func NewMQ() mq.MQ {
 		panic(fmt.Errorf("failed to read config: %s", err))
 	}
 
+	godotenv.Load()
 	mqConfig.DSN = goenv.MustGetSecretFromEnv("RABBITMQ_DSN")
 
 	messageQ, err := mq.New(mqConfig)
