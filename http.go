@@ -10,3 +10,9 @@ type GqlConfig struct {
 	Environment       string
 	Redis             RedisConfig
 }
+
+type ClientConfig struct {
+	BaseURL        string
+	CfClientID     string
+	CfClientSecret string
+}
