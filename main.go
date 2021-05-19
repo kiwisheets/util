@@ -29,6 +29,9 @@ type DatabaseConfig struct {
 	Database       string
 	Port           string
 	MaxConnections int
+	SSLMode        string
+	SSLCAPath      string
+	Options        string
 }
 
 type RedisConfig struct {
