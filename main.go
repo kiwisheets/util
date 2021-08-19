@@ -36,4 +36,5 @@ type DatabaseConfig struct {
 
 type RedisConfig struct {
 	Address string
+	Prefix  string
 }
