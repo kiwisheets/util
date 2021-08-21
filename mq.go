@@ -1,8 +1,10 @@
 package util
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
+	"strconv"
 
 	"github.com/cheshir/go-mq"
 	"github.com/joho/godotenv"
@@ -24,7 +26,8 @@ func NewMQ() mq.MQ {
 	}
 
 	godotenv.Load()
-	mqConfig.DSN = goenv.MustGetSecretFromEnv("RABBITMQ_DSN")
+
+	mqConfig.DSN = goenv.CanGet("RABBITMQ_DSN", buildDSN())
 
 	messageQ, err := mq.New(mqConfig)
 	if err != nil {
@@ -32,4 +35,15 @@ func NewMQ() mq.MQ {
 	}
 
 	return messageQ
+}
+
+func buildDSN() string {
+	protocol := goenv.CanGet("RABBITMQ_PROTOCOL", "amqp")
+	host := goenv.MustGet("RABBITMQ_HOST")
+	port := goenv.CanGetInt("RABBITMQ_PORT", 5672)
+	username := goenv.MustGet("RABBITMQ_USERNAME")
+	password := goenv.MustGet("RABBITMQ_PASSWORD")
+	vhost := goenv.CanGet("RABBITMQ_VHOST", "/")
+
+	return fmt.Sprintf("%s://%s:%s@%s:%s%s", protocol, host, strconv.Itoa(port), username, password, vhost)
 }
