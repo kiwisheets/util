@@ -10,7 +10,7 @@ type GqlConfig struct {
 	Port              string
 	ComplexityLimit   int
 	Environment       string
-	Cache             *graphql.Cache
+	Cache             graphql.Cache
 }
 
 type ClientConfig struct {
