@@ -1,5 +1,7 @@
 package util
 
+import "github.com/99designs/gqlgen/graphql"
+
 type GqlConfig struct {
 	APIPath           string
 	PlaygroundPath    string
@@ -8,7 +10,7 @@ type GqlConfig struct {
 	Port              string
 	ComplexityLimit   int
 	Environment       string
-	Redis             RedisConfig
+	Cache             *graphql.Cache
 }
 
 type ClientConfig struct {

@@ -2,16 +2,6 @@ package util
 
 import "crypto/ecdsa"
 
-type ServerConfig struct {
-	Version     string
-	Environment string
-	GraphQL     GqlConfig
-	JWT         JWTConfig
-	Hash        HashConfig
-	Database    DatabaseConfig
-	Redis       RedisConfig
-}
-
 type JWTConfig struct {
 	PublicKey  *ecdsa.PublicKey
 	PrivateKey *ecdsa.PrivateKey
@@ -32,9 +22,4 @@ type DatabaseConfig struct {
 	SSLMode        string
 	SSLCAPath      string
 	Options        string
-}
-
-type RedisConfig struct {
-	Address string
-	Prefix  string
 }
